@@ -210,13 +210,20 @@ function HoloInterface() {
                         </p>
                     </div>
 
-                    {/* Form */}
-                    {/* Form */}
+                    {/* --- CONTACT FORM STARTS HERE --- */}
                     <form
-                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        action="https://api.web3forms.com/submit"
                         method="POST"
                         className="space-y-6"
                     >
+                        {/* =========================================== */}
+                        {/* 🔴 IMPORTANT: PASTE YOUR ACCESS KEY HERE  🔴 */}
+                        <input type="hidden" name="access_key" value="ab13f565-b85d-41b2-9422-4227ef32b242" />
+                        {/* =========================================== */}
+
+                        {/* Optional: Spam Protection */}
+                        <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <InputGroup label="Identity" placeholder="Name" name="name" />
                             <InputGroup label="Comms" placeholder="Mobile Number" name="mobile" />
@@ -237,6 +244,7 @@ function HoloInterface() {
                             </button>
                         </div>
                     </form>
+                    {/* --- CONTACT FORM ENDS HERE --- */}
 
                     {/* Social Links */}
                     <div className="mt-8 pt-6 border-t border-white/10">
