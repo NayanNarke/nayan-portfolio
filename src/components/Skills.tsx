@@ -140,13 +140,6 @@ function WarpTunnel() {
                         key={star.id}
                         className="absolute left-1/2 top-1/2 flex items-center justify-center font-bold whitespace-nowrap will-change-transform"
                         style={{
-                            transform: `translate3d(${star.x}px, ${star.y}px, ${star.z}px) scale(${k})`, // Actual 3D transform (browser handles perspective if parent has it)
-                            // Wait, if we use translate3d(x,y,z), we don't need manual scale K if perspective is set on parent.
-                            // Let's use clean CSS 3D:
-                            // Parent has perspective: 1000px.
-                            // Child translateZ starts at -2000 (far away) and goes to 0 or positive.
-                            // Wait, standard CSS coords: +Z is towards viewer? No, usually +Z is out of screen.
-
                             // Let's try direct translation manually for full control without fighting CSS origin
                             transform: `translate(-50%, -50%) translate3d(${x}px, ${y}px, 0) scale(${k})`,
                             color: star.color,
