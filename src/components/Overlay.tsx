@@ -15,41 +15,43 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
     return (
         <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-center items-center">
             {/* Section 1 */}
-            <motion.div style={{ y: y1, opacity: opacity1 }} className="absolute text-center px-4 z-20">
-                {/* Intro Label */}
-                <p className="text-blue-400 tracking-[0.5em] uppercase text-xs md:text-sm font-bold mb-4 ml-1">
+            <motion.div style={{ y: y1, opacity: opacity1 }} className="absolute text-center px-4 z-20 w-full">
+                {/* Intro Label - High Contrast & Spaced */}
+                <p className="text-white/80 tracking-[0.8em] uppercase text-xs md:text-sm font-bold mb-2 ml-1 drop-shadow-md">
                     Hello, I am
                 </p>
 
-                {/* Main Heading - Clean & Massive */}
-                <h1 className="text-6xl md:text-9xl font-bold tracking-tighter text-white mb-6 leading-[0.9]">
-                    Nayan Narke
+                {/* Main Heading - Cinematic Scale & Metal Gradient */}
+                <h1 className="text-[12vw] md:text-[9rem] font-black tracking-tighter leading-[0.85] mb-6 drop-shadow-2xl">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-gray-100 to-gray-400">
+                        Nayan Narke
+                    </span>
                 </h1>
 
-                {/* Subtitle - Refined & Minimal */}
-                <div className="flex items-center justify-center gap-3 md:gap-6 text-neutral-400 font-light tracking-widest text-xs md:text-sm uppercase">
+                {/* Subtitle - Bold & Sharp */}
+                <div className="flex items-center justify-center gap-4 text-white font-semibold tracking-[0.3em] text-[0.6rem] md:text-sm uppercase drop-shadow-lg">
                     <span>Web Developer</span>
-                    <span className="w-1 h-1 bg-neutral-600 rounded-full" />
+                    <span className="text-blue-500">•</span>
                     <span>Graphic Designer</span>
-                    <span className="w-1 h-1 bg-neutral-600 rounded-full" />
+                    <span className="text-blue-500">•</span>
                     <span>Video Editor</span>
                 </div>
             </motion.div>
 
             {/* Section 2 */}
-            <motion.div style={{ y: y2, opacity: opacity2 }} className="absolute left-10 md:left-20 max-w-3xl z-20">
-                <h2 className="text-4xl md:text-7xl font-bold leading-tight text-white tracking-tight">
+            <motion.div style={{ y: y2, opacity: opacity2 }} className="absolute left-6 md:left-20 max-w-4xl z-20">
+                <h2 className="text-4xl md:text-8xl font-bold leading-[0.9] text-white tracking-tighter drop-shadow-xl">
                     Crafting digital <br />
-                    <span className="text-neutral-500">experiences.</span>
+                    <span className="text-neutral-400">masterpieces.</span>
                 </h2>
-                <p className="mt-8 text-lg text-neutral-400 max-w-lg leading-relaxed font-light">
+                <p className="mt-8 text-lg md:text-xl text-white/90 max-w-xl leading-relaxed font-normal drop-shadow-md">
                     Helping brands build modern, high-performance websites with strong visual identities.
                 </p>
             </motion.div>
 
             {/* Section 3 */}
-            <motion.div style={{ y: y3, opacity: opacity3 }} className="absolute right-10 md:right-20 text-right max-w-3xl z-20">
-                <h2 className="text-4xl md:text-7xl font-bold leading-tight text-white tracking-tight">
+            <motion.div style={{ y: y3, opacity: opacity3 }} className="absolute right-6 md:right-20 text-right max-w-4xl z-20">
+                <h2 className="text-4xl md:text-8xl font-bold leading-[0.9] text-white tracking-tighter drop-shadow-xl">
                     Let&apos;s build <br />
                     <span className="text-blue-500">the future.</span>
                 </h2>
