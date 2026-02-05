@@ -16,24 +16,24 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: MotionVa
         <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-center items-center">
             {/* Section 1 */}
             <motion.div style={{ y: y1, opacity: opacity1 }} className="absolute text-center px-4 z-20 w-full">
-                {/* Intro Label - High Contrast & Spaced */}
-                <p className="text-white/80 tracking-[0.8em] uppercase text-xs md:text-sm font-bold mb-2 ml-1 drop-shadow-md">
+                {/* Intro Label - Larger & Clearer */}
+                <p className="text-blue-400 tracking-[0.2em] uppercase text-sm md:text-xl font-semibold mb-4 ml-1 drop-shadow-md">
                     Hello, I am
                 </p>
 
-                {/* Main Heading - Cinematic Scale & Metal Gradient */}
-                <h1 className="text-[12vw] md:text-[9rem] font-black tracking-tighter leading-[0.85] mb-6 drop-shadow-2xl">
+                {/* Main Heading - Cinematic Scale */}
+                <h1 className="text-[12vw] md:text-[9rem] font-black tracking-tighter leading-[0.85] mb-8 drop-shadow-2xl">
                     <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-gray-100 to-gray-400">
                         Nayan Narke
                     </span>
                 </h1>
 
-                {/* Subtitle - Bold & Sharp */}
-                <div className="flex items-center justify-center gap-4 text-white font-semibold tracking-[0.3em] text-[0.6rem] md:text-sm uppercase drop-shadow-lg">
+                {/* Subtitle - Legible & Balanced */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6 text-white/90 font-medium tracking-[0.2em] text-xs md:text-lg uppercase drop-shadow-lg">
                     <span>Web Developer</span>
-                    <span className="text-blue-500">•</span>
+                    <span className="hidden md:inline-block text-blue-500 text-xs">●</span>
                     <span>Graphic Designer</span>
-                    <span className="text-blue-500">•</span>
+                    <span className="hidden md:inline-block text-blue-500 text-xs">●</span>
                     <span>Video Editor</span>
                 </div>
             </motion.div>
