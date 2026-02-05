@@ -43,7 +43,7 @@ export default function Skills() {
 function WarpTunnel() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [stars, setStars] = useState<Star[]>([]);
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number>(0);
     const mouseRef = useRef({ x: 0, y: 0 });
 
     // Colors for different categories
