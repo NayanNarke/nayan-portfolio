@@ -143,7 +143,7 @@ function MagicCard({ feature, index }: { feature: any, index: number }) {
 }
 
 const Meteors = ({ number = 20 }: { number?: number }) => {
-    const [meteors, setMeteors] = useState<number[]>([]);
+    const [meteors, setMeteors] = useState<React.CSSProperties[]>([]);
 
     useEffect(() => {
         const styles = [...new Array(number)].map(() => ({
@@ -151,7 +151,7 @@ const Meteors = ({ number = 20 }: { number?: number }) => {
             animationDelay: Math.random() * 1 + 0.2 + "s",
             animationDuration: Math.floor(Math.random() * 8 + 2) + "s",
         }));
-        setMeteors(styles as any);
+        setMeteors(styles);
     }, [number]);
 
     return (
